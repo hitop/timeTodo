@@ -1,6 +1,8 @@
 task.json
 c.html
 *backup.js
+.jpg
+.png
 
 node_modules
 .log
