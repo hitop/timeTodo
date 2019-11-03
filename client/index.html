@@ -1,0 +1,18 @@
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="./index.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <keep-alive>
+    <div v-if="showtlist">
+      <ul class="tasklist">
+        <list-item v-for="(item, taskid) in tasklists" @togtask="togtask" :key="taskid" :item="item" :taskid="taskid"></list-item>
+      </ul>
+      <div class="func center"><button class="btn btn--addtask" @click="newTask">新建任务</button></div>
+    </div>
+    <addtaskpanel v-else-if="edittasktid" :taskid="edittasktid" :task="task"></addtaskpanel>
+    <newtaskpanel v-else></newtaskpanel>
+  </keep-alive>
+</div>
+
+<script type="text/javascript" src="./vue.js"></script>

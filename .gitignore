@@ -1,0 +1,8 @@
+task.json
+c.html
+*backup.js
+
+node_modules
+.log
+.sh
+.bat
